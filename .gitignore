@@ -10,3 +10,4 @@ bin
 *.ini
 *.json
 ImGui-Node-Editor.vcxproj
+**/obj/**
