@@ -38,8 +38,12 @@ project "ImGui-Node-Editor"
         cppdialect "C++17"
         staticruntime "On"
 
-    filter { "system:windows", "configurations:Debug" }
-        buildoptions "/MTd"
-        
-    filter { "system:windows", "configurations:Release" }
-        buildoptions "/MT"
+	filter "configurations:debug"
+		runtime "Debug"
+		symbols "on"
+		buildoptions "/MDd"
+				
+	filter "configurations:release"
+		runtime "Release"
+		optimize "on"
+		buildoptions "/MD"
